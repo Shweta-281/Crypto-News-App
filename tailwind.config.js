@@ -1,18 +1,22 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  mode: "jit",
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    fontFamily: {
+      raleway: ["Raleway", "sans-serif"],
+    },
+    colors: {
+      background: "#0d1318",
+      primary: "#4169e1",
+      secondary: "#ABAABA",
+      active: "#E6E7E7",
+      light: "#283B47",
     },
   },
+
+  variants: {
+    extend: {},
+  },
   plugins: [],
-}
+};
